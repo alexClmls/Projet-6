@@ -1,0 +1,25 @@
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundIMG {
+    width: 1240px;
+    height: 223px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: darken;
+    border-radius: 25px;
+    color: black;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 48px;
+    font-weight: 500;
+    margin: auto; 
+}
