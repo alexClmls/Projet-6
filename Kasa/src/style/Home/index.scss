@@ -1,7 +1,13 @@
+
 .background-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:#A7A8A7;
+    border-radius: 25px;
+    width: 1240px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .backgroundIMG {
@@ -11,9 +17,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    mix-blend-mode: darken;
+    mix-blend-mode: multiply;
     border-radius: 25px;
-    color: black;
 }
 
 h1 {
@@ -22,4 +27,5 @@ h1 {
     font-size: 48px;
     font-weight: 500;
     margin: auto; 
+    position: absolute;
 }
