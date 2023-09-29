@@ -23,3 +23,7 @@ a {
 ul {
   margin: 0;
 }
+
+p {
+  margin-block: 0;
+}

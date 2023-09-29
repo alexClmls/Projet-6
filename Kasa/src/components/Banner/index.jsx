@@ -1,9 +1,9 @@
-function Banner({ background }) {
+function Banner({ background, title}) {
     return (
       <div className="background-container">
         <div className="backgroundIMG" style={{ backgroundImage: `url(${background})` }}>
         </div>
-        <h1>Chez vous, partout et ailleurs</h1>
+        <h1>{title}</h1>
       </div>
     )
   }

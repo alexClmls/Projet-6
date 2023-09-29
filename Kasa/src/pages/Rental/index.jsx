@@ -1,29 +1,24 @@
-import { useParams } from 'react-router-dom'; // Importez useParams
-import Full from '../../components/Full/full'; // Assurez-vous que le chemin est correct
+import { useParams } from 'react-router-dom';
 import data from '../../data/Annonces.json';
 import '../../style/Rental/index.scss'
 import Footer from "../../components/Footer"
-const Rental = () => {
-  const { id } = useParams(); // Récupérez l'ID à partir de l'URL
+import Error from "../../components/Error"
+import "../../style/Collapse/index.scss"
+import Lodgement from '../../components/Lodgement';
 
-  // Recherchez les détails de l'appartement dans vos données
+const Rental = () => {
+  const { id } = useParams(); // Récupérer l'ID à partir de l'URL
+
+
   const apartment = data.find(annonce => annonce.id === id);
+  
   if (!apartment) {
-    return <div>Appartement non trouvé</div>;
+    return <Error />
   }
 
   return (
     <><div>
-      <Full
-        id={apartment.id}
-        title={apartment.title}
-        pictures={apartment.pictures}
-        host={apartment.host}
-        location={apartment.location}
-        rating={apartment.rating}
-        tags={apartment.tags}
-        description={apartment.description}
-        equipments={apartment.equipments} />
+      <Lodgement type='Full' data={apartment} />
     </div><Footer position="relative" /></>
   );
 };

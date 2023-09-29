@@ -1,11 +1,12 @@
 .Header {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 80vw;
 }
 nav {
     display: flex;

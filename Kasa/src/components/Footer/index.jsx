@@ -6,7 +6,6 @@ const Footer = ({ position }) => {
      position: position === 'relative' ? 'relative' : 'absolute',
      bottom: 0,
      width: '100%',
-     /* Autres styles du footer */
    };
  
    return (

@@ -1,33 +1,34 @@
-import Carrousel from "../carrousel";
-import star from "../../assets/logos/star.png";
-import starIna from "../../assets/logos/star-inactive.png";
-import Collapse from '../Collapse';
+import Carrousel from "../../carrousel";
+import star from "../../../assets/logos/star.png";
+import starIna from "../../../assets/logos/star-inactive.png";
+import Collapse from '../../Collapse';
 
-function Full({id, title, pictures, host, location, rating, tags, description, equipments }) {
+function Full({location}) {
+  const { host } = location;
   const { name: hostName, picture: hostPicture } = host;
   const [firstName, lastName] = hostName.split(' '); // Divisez la chaîne en prénom et nom
   const stars = [];
-  for (let i = 0; i < rating; i++) {
+  for (let i = 0; i < location.rating; i++) {
     stars.push(<img src={star} key={i} className="star"/>);
   }
-  for (let i = rating; i < 5; i++) {
+  for (let i = location.rating; i < 5; i++) {
     stars.push(<img src={starIna} key={i} className="star"/>);
   }
-  const equipementsList = equipments.map((item, index) => (
-    <div key={index}>{item}</div>
+  const equipementsList = location.equipments.map((item, index) => (
+    <li key={index}>{item}</li>
   ));
 
   return (
     <div className="main">
       <div>
-        <Carrousel pictures={pictures} />  
+        <Carrousel pictures={location.pictures} />  
       </div>
       <div className="wrapper-profil">
         <div className="wrapper-title-loc-tag">
-          <span>{title}</span>
-          <p>{location}</p>
+          <span>{location.title}</span>
+          <p>{location.location}</p>
           <ul>
-            {tags.map((tag, index) => (
+            {location.tags.map((tag, index) => (
               <li key={index}>{tag}</li>
             ))}
           </ul>
@@ -44,8 +45,8 @@ function Full({id, title, pictures, host, location, rating, tags, description, e
         </div>
       </div>
       <div className="wrapper-collapse">
-      <Collapse title="Description" content={description} />
-      <Collapse title="Équipements" content={equipementsList} />
+      <Collapse title="Description" content={location.description} className="collapse-rental"/>
+      <Collapse title="Équipements" content={equipementsList} wrapperTag="ul" className="collapse-rental"/>
       </div> 
     </div>
   )
