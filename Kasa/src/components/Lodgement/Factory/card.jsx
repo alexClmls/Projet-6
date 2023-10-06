@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
-function Card({location}) {
+function Card({lodgements}) {
     return (
-        <Link to={`/location/${location.id}`}>
-            <div>
-                <div className="background-card" style={{ backgroundImage: `url(${location.cover})` }}>
-                    <div className="rect"><span>{location.title}</span></div>   
-                </div> 
-            </div>  
-        </Link>
-        
+        <div id='card'>
+            {lodgements.map((lodgement) => (
+                <Link to={`/location/${lodgement.id}`}>
+                    <div>
+                        <div className="background-card" style={{ backgroundImage: `url(${lodgement.cover})` }}>
+                            <div className="rect"><span>{lodgement.title}</span></div>   
+                        </div> 
+                    </div>  
+                </Link>
+            ))}
+        </div>   
     )
 }
  

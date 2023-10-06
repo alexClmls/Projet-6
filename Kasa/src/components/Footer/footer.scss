@@ -21,3 +21,15 @@
     text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+    .d-footer{
+        align-items: center;
+    }
+    .d-footer .text-wrapper {
+        font-size: 12px;
+        height: 46px;
+        width: 133px;
+        line-height: 142.6%;
+        margin-bottom: 46px;
+    }
+}

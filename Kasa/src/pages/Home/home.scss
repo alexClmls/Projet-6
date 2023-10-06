@@ -1,4 +1,3 @@
-
 .background-container {
     display: flex;
     justify-content: center;
@@ -9,6 +8,8 @@
     margin: auto;
     margin-top: 50px;
     margin-bottom: 40px;
+    max-width: 1240px;
+    height: 223px;
 }
 
 .backgroundIMG {
@@ -33,7 +34,8 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 60px;
-    width: 1240px;
+    
+    max-width: 1240px;
     grid-row-gap: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -68,3 +70,49 @@ h1 {
     font-weight: 500;
     margin: 20px;
 }
+
+@media screen and (max-width: 1024px) {
+    /* Pour les écrans plus petits, réduisez le nombre de colonnes */
+    #card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    #card {
+        grid-template-columns: 1fr;
+        background-color: #ffffff;
+        gap: 20px;
+        padding: 0;
+        margin-bottom: 27px;
+        width: 335px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    #card div {
+        height: 255px;
+    }
+
+    .background-container {
+        margin-top: 27px;
+        margin-bottom: 22px;   
+    }
+        
+
+
+    .background-container, .backgroundIMG {
+        justify-content: flex-start;
+        height: 111px;
+        background-size: cover;
+        min-width: 335px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-left: 10px;
+        width: 60%;
+    }
+  }

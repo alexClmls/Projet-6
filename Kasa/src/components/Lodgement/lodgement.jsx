@@ -4,18 +4,9 @@ import Card from './Factory/card';
 
 function Lodgement({ type, data }) {
   if (type === 'Full') {
-    return <Full location={data} />;
+    return <Full lodgement={data} />;
   } else if (type === 'Card') {
-    return (
-      <div id='card'>
-        {data.map((annonce) => (
-          <Card
-            key={annonce.id}
-            location={annonce}
-          />
-        ))}
-      </div>
-    );
+    return <Card lodgements={data}/>
   } else {
     throw new Error('Type de composant non pris en charge');
   }

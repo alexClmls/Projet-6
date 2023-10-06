@@ -1,38 +1,12 @@
-// .selected {
-//     display: block;
-//     color: white;
-//     font-size: 18px;
-//     font-weight: 500;
-// }
-
-// .carousel {
-//     display: flex;
-//     align-items: center;
-// }
-
-// .imgCarou{
-//     width: 100%;
-//     height: 415px;
-//     object-fit: cover;
-//     z-index: 1;
-//     border-radius: 25px;
-// }
-// .carousel button {
-//     border: none;
-//     background: none;
-//     color: white;
-//     position: absolute;
-//     z-index: 2;
-//     margin: auto;
-//     font-size: 5rem;
-// }
-// .prev-button {
-//     left: 23px;
-// }
-// .next-button {
-//     right: 23px;
-// }
-/* Ajoutez ces styles CSS dans votre fichier CSS ou SCSS existant */
+.indicator {
+    color: #ffffff;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 140%;
+    font-weight: 500;
+    position: absolute;
+    bottom: 25px;
+    z-index: 2;
+}
 
 .carousel {
     position: relative;
@@ -73,14 +47,14 @@
   .carousel-slide {
     opacity: 0;
     transition: opacity 0.5s;
-    display: none; /* Cache toutes les diapositives par défaut */
+    display: none; 
     justify-content: center;
     align-items: center;
   }
   
   .carousel-slide.active {
     opacity: 1;
-    display: flex; /* Montre uniquement la diapositive active */
+    display: flex; 
     width: 100%;
   }
   
@@ -90,15 +64,18 @@
     object-fit: cover;
     z-index: 1;
     border-radius: 25px;
+    transition: transform 0.5s ease-in-out;
   }
   
   
 .main {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: auto;
+    margin-right:auto;
     margin-top: 50px;
     margin-bottom: 50px;
     font-family: "Montserrat-Medium", Helvetica;
+    max-width: 1240px;
+    width: 80%;
 }
 
 .wrapper-profil {
@@ -178,10 +155,11 @@
 .wrapper-collapse {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .collapse-rental {
-    width: 40vw;
+    width: 45%;
 }
 
 .collapse-header {
@@ -208,9 +186,83 @@
     font-size: 18px;
     font-weight: 400;
     border-radius: 10px 10px 5px 5px;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 li {
     list-style: none;
+}
+
+@media screen and (max-width:768px) {
+    .main {
+        min-width: 335px;
+        margin-top: 27px;
+        margin-bottom: 27px;
+    }
+    .imgCarou {
+        height: 255px;
+    }
+
+    .carousel-button img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+    .wrapper-profil {
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .wrapper-title-loc-tag span {
+        font-size: 18px;
+    }
+
+    .wrapper-title-loc-tag p {
+        font-size: 14px;
+    }
+
+    .wrapper-title-loc-tag ul {
+        flex-wrap: wrap;
+    }
+
+    .wrapper-title-loc-tag li {
+        font-size: 10px;
+    }
+
+
+    .wrapper-name-pic-rate {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+    .rating {
+        margin-top: 0;
+        width: 98px;
+    }
+    .rating img {
+        width: 18px;
+    }
+
+    .wrapper-name {
+        font-size: 12px;
+    }
+
+    .wrapper-name-pic img {
+        width: 32px;
+    }
+
+    .wrapper-collapse {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .collapse-rental {
+        width: 100%;
+    }
 }

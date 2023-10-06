@@ -1,0 +1,17 @@
+.collapse p {
+    width:auto;
+}
+
+.collapse.open {
+    background-color:#F6F6F6;
+    border-radius: 10px 10px 5px 5px;
+}
+
+@media screen and (max-width:768px) {
+    .collapse-header {
+        font-size: 13px;
+    }
+    .collapse-content {
+        font-size: 12px;
+    }
+}

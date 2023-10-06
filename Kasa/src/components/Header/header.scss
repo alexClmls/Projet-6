@@ -1,0 +1,54 @@
+.Header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    max-width: 1240px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 34px;
+    width: 250px;
+}
+.link {
+    color: #ff6060;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.link.active {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+  @media screen and (max-width: 768px) {
+    .Header {
+        margin-top: 20px;
+        min-width: 335px;
+    }
+    .Header img {
+        content: url("../../assets/logos/LOGO-Header-small.png");
+    }
+    nav {
+        width: 190px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .link {
+        font-size: 12px;
+        margin-left: 26px;
+    }
+}

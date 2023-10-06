@@ -33,6 +33,7 @@ function Carrousel({ pictures }) {
       <button className="carousel-button next-button" onClick={goToNextSlide}>
         <img src={rightArrow} alt="Next" />
       </button>
+      <div className='indicator'>{currentIndex+1}/{pictures.length}</div>
     </div>
   );
 }

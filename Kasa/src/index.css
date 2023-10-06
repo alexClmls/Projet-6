@@ -7,12 +7,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wrapper {
-  min-height: 100%;
+/* #wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+} */
+.home-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+.about-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+.rental-page {
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-
+.error-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
