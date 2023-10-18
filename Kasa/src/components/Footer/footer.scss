@@ -1,16 +1,16 @@
-.d-footer {
+.footer {
     background-color: #000000;
     height: 209px;
     display: flex;
     flex-direction: column;
 }
 
-.d-footer img {
+.footer img {
     margin: auto;
     margin-top: 66px;
 }
 
-.d-footer .text-wrapper {
+.footer .text-wrapper {
     color: #ffffff;
     font-family: "Montserrat-Medium", Helvetica;
     font-size: 24px;
@@ -22,10 +22,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .d-footer{
+    .footer{
         align-items: center;
     }
-    .d-footer .text-wrapper {
+    .footer .text-wrapper {
         font-size: 12px;
         height: 46px;
         width: 133px;

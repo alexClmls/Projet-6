@@ -10,7 +10,11 @@ function Home() {
   return (
     <><Header />
       <Banner background={background} title={"Chez vous, partout et ailleurs"} />
-        <Lodgement type='Card' data={data} />
+      <div id='card'>
+        {data.map((lodgement) => (
+        <Lodgement type='Card' data={lodgement} key={lodgement.id}/>
+        ))}
+      </div>  
       <Footer position="relative" />
     </>
   );

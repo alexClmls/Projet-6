@@ -1,73 +1,3 @@
-.indicator {
-    color: #ffffff;
-    font-family: "Montserrat-Medium", Helvetica;
-    font-size: 140%;
-    font-weight: 500;
-    position: absolute;
-    bottom: 25px;
-    z-index: 2;
-}
-
-.carousel {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    z-index: 2;
-  }
-  
-  .prev-button {
-    left: 10px;
-  }
-  
-  .next-button {
-    right: 10px;
-  }
-  
-  .carousel-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-  }
-  
-  .carousel-slide {
-    opacity: 0;
-    transition: opacity 0.5s;
-    display: none; 
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .carousel-slide.active {
-    opacity: 1;
-    display: flex; 
-    width: 100%;
-  }
-  
-  .imgCarou {
-    width: 100%;
-    height: 415px;
-    object-fit: cover;
-    z-index: 1;
-    border-radius: 25px;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  
 .main {
     margin-left: auto;
     margin-right:auto;
@@ -151,44 +81,12 @@
     width: 196px;
     margin-top: 21px;
 }
-
-.wrapper-collapse {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
 .collapse-rental {
     width: 45%;
 }
-
-.collapse-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff6060;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: "Montserrat-Medium", Helvetica;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
+.collapse-rental.collapse-content {
+    width: auto;
 }
-
-.collapse img {
-    margin-right: 10px;
-}
-
-.collapse-content {
-    padding: 20px;
-    color: #ff6060;
-    font-family: "Montserrat-Regular", Helvetica;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 10px 10px 5px 5px;
-    line-height: 1.5em;
-}
-
 li {
     list-style: none;
 }
@@ -199,19 +97,6 @@ li {
         margin-top: 27px;
         margin-bottom: 27px;
     }
-    .imgCarou {
-        height: 255px;
-    }
-
-    .carousel-button img {
-        width: 24px;
-        height: 24px;
-    }
-
-    .indicator {
-        display: none;
-    }
-
     .wrapper-profil {
         flex-direction: column;
         margin-top: 15px;
@@ -232,6 +117,8 @@ li {
 
     .wrapper-title-loc-tag li {
         font-size: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
 

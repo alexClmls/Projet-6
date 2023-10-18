@@ -1,19 +1,11 @@
 import Carrousel from "../../Carrousel/carrousel";
-import star from "../../../assets/logos/star.png";
-import starIna from "../../../assets/logos/star-inactive.png";
 import Collapse from '../../Collapse/collapse';
+import Rating from '../../Rating/rating';
 
 function Full({lodgement}) {
   const { host } = lodgement;
   const { name: hostName, picture: hostPicture } = host;
-  const [firstName, lastName] = hostName.split(' '); // Divisez la chaîne en prénom et nom
-  const stars = [];
-  for (let i = 0; i < lodgement.rating; i++) {
-    stars.push(<img src={star} key={i} className="star"/>);
-  }
-  for (let i = lodgement.rating; i < 5; i++) {
-    stars.push(<img src={starIna} key={i} className="star"/>);
-  }
+  const [firstName, lastName] = hostName.split(' '); // Divise la chaîne en prénom et nom
   const equipementsList = lodgement.equipments.map((item, index) => (
     <li key={index}>{item}</li>
   ));
@@ -41,7 +33,7 @@ function Full({lodgement}) {
             </div>
             <img src={hostPicture} alt={hostName} />
           </div>
-          <div className="rating">{stars}</div>
+          <Rating stars={lodgement.rating} />
         </div>
       </div>
       <div className="wrapper-collapse">

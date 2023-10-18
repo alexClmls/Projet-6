@@ -1,0 +1,53 @@
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#A7A8A7;
+    border-radius: 25px;
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    max-width: 1240px;
+    height: 223px;
+}
+
+.backgroundIMG {
+    width: 80vw;
+    height: 223px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: multiply;
+    border-radius: 25px;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 48px;
+    font-weight: 500;
+    margin: auto; 
+    position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+
+    .background-container {
+        margin-top: 27px;
+        margin-bottom: 22px;   
+    }
+        
+    .background-container, .backgroundIMG {
+        justify-content: flex-start;
+        height: 111px;
+        background-size: cover;
+        min-width: 335px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-left: 10px;
+        width: 60%;
+    }
+  }

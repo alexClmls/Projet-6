@@ -9,8 +9,6 @@ import Header from '../../components/Header/header';
 
 const Rental = () => {
   const { id } = useParams(); // Récupérer l'ID à partir de l'URL
-
-
   const lodgement = data.find(annonce => annonce.id === id);
   
   if (!lodgement) {

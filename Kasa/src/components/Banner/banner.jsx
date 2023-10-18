@@ -1,3 +1,5 @@
+import './banner.scss';
+
 function Banner({ background, title}) {
     return (
       <div className="background-container">

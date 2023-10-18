@@ -4,21 +4,9 @@ import Collapse from "../../components/Collapse/collapse"
 import Banner from "../../components/Banner/banner"
 import "./about.scss"
 import Data from "../../data/About.json"
-import { useState, useEffect } from 'react';
 import Header from "../../components/Header/header"
 
 function About() {
-
-  // const [bannerWidth, setBannerWidth] = useState(0);
-
-  // useEffect(() => {
-  //   // Récupérer la largeur de la bannière après le rendu
-  //   const bannerElement = document.querySelector('.background-container');
-  //   if (bannerElement) {
-  //     const width = bannerElement.offsetWidth;
-  //     setBannerWidth(width);
-  //   }
-  // }, []);
 
   return (
     <><Header />

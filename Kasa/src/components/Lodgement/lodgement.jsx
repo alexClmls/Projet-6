@@ -6,7 +6,7 @@ function Lodgement({ type, data }) {
   if (type === 'Full') {
     return <Full lodgement={data} />;
   } else if (type === 'Card') {
-    return <Card lodgements={data}/>
+    return <Card lodgement={data}/>
   } else {
     throw new Error('Type de composant non pris en charge');
   }

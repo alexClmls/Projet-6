@@ -17,15 +17,15 @@ const AppRouter = () => {
   } else if (location.pathname === '/a-propos') {
     wrapperClass = 'about-page';
   } else {
-    // Créez un objet matchOptions pour le modèle de l'URL de la page Rental
+    // objet matchOptions pour le modèle de l'URL de la page Rental
     const matchOptions = {
       path: '/location/:id',
     };
 
-    // Créez un regexp à partir de matchOptions
+    // regexp à partir de matchOptions
     const pageRentalRegExp = pathToRegexp(matchOptions.path);
 
-    // Vérifiez si l'URL correspond à la page Rental
+    // vérifie si l'URL correspond à la page Rental
     if (pageRentalRegExp.test(location.pathname)) {
       wrapperClass = 'rental-page';
     } else {
